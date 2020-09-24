@@ -3,12 +3,6 @@ const express = require('express');
 const router = express.Router();
 const dbMethods = require('../db_methods/note_methods.js');
 
-// router.get('/', (req, res) => {
-//   const races = ['human', 'elf', 'hobbit', 'wizard', 'dwarf', 'orc'];
-
-//   res.status(200).json(races);
-// });
-
 router.get('/', (req,res)=>{
   dbMethods.getNotes()
     .then(notes=>{

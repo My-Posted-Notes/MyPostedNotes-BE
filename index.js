@@ -12,7 +12,7 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-const noteRoutes = require('./routes/noteRoutes');
+const noteRoutes = require('./routes/note_routes');
 
 server.use('/api/note', noteRoutes);
 server.use('/', (req, res) => res.send('API up and running!'));
