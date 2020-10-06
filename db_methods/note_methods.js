@@ -1,7 +1,7 @@
-const knex = require('knex');
-const dbEngine = process.env.NODE_ENV || 'development';
-const knexConfig = require('../knexfile.js')[dbEngine];
-const db = knex(knexConfig);
+// const knex = require('knex');
+// const dbEngine = process.env.NODE_ENV || 'development';
+// const knexConfig = require('../knexfile.js')[dbEngine];
+const db = require("../data/db-config.js");
 
 const getNotes =()=>{
     return db("notes");

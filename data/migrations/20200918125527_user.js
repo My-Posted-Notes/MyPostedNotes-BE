@@ -3,8 +3,9 @@ exports.up = function(knex, Promise) {
         tbl.increments('id');
         tbl.string('name',255).notNullable();
         tbl.string('email',255).notNullable().unique();
-        tbl.timestamp('created_at').defaultTo(knex.fn.now());
-        tbl.timestamp('updated_at').defaultTo(knex.fn.now());
+        tbl.timestamps(true, true);
+        // tbl.timestamp('created_at').defaultTo(knex.fn.now());
+        // tbl.timestamp('updated_at').defaultTo(knex.fn.now());
     })
 };
 

@@ -6,12 +6,12 @@ const hostname = process.env.HOSTNAME || '127.0.0.1'; // the local computer wher
 const express = require('express'); // import the express package
 const cors = require('cors');
 const helmet = require('helmet');
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
 
 const server = express(); // creates the server
 server.use(helmet());
 server.use(cors());
-server.use(cookieParser());
+// server.use(cookieParser());
 server.use(express.json());
 
 const noteRoutes = require('./routes/note_routes');
