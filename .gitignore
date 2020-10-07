@@ -4,4 +4,4 @@ yarn-error.log
 .nyc_output
 coverage
 build/
-dev.sqlite3
+data/dev.sqlite3
